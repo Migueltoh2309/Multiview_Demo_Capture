@@ -1,0 +1,28 @@
+# Etapa 4 del roadmap: tablero ChArUco.
+# Estas dimensiones DEBEN corresponder al tablero fisico impreso y medido con
+# calibrador. Un error de 1 mm en square_length_m se propaga como un error de
+# escala del ~2% en toda la reconstruccion 3D.
+
+dictionary: DICT_5X5_1000   # 5x5 tolera mejor el desenfoque que 6x6/7x7
+squares_x: 8                # numero de casillas en horizontal
+squares_y: 6                # numero de casillas en vertical
+square_length_m: 0.044      # lado de la casilla del damero, en METROS.
+                            # 2026-09-24: MEDIDO con calibrador (5 casillas
+                            # seguidas / 5) = 44 mm real, vs. 45 mm nominal de
+                            # diseno (2026-09-22). 1 mm de diferencia, dentro
+                            # de lo esperable de imprenta -- pero se usa el
+                            # valor medido, no el nominal, de aqui en adelante.
+marker_length_m: 0.0323     # lado del marcador ArUco, en METROS (< square).
+                            # Escalado en la misma proporcion de diseno
+                            # (33/45 = 0.7333) sobre el square_length_m medido;
+                            # no se remidio el marcador por separado.
+legacy_pattern: false       # true solo si el tablero se genero con OpenCV < 4.6
+
+# --- Datos de la impresion (rellenar tras imprimir y MEDIR) ---
+print:
+  page: A3                  # A4 queda pequeno para 1280x720 a 1.5-2 m
+  dpi: 300
+  measured_square_mm: 44    # 2026-09-24, calibrador, 5 casillas / 5
+  mounted_on: ""            # el tablero DEBE ir sobre superficie rigida y plana
+                            # (carton pluma / MDF). Una hoja curvada arruina
+                            # la calibracion intrinseca.

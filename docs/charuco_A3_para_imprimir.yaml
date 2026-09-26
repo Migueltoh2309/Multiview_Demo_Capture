@@ -1,0 +1,14 @@
+file: /home/mito/Maestria_tesis/docs/charuco_A3_para_imprimir.png
+dictionary: DICT_5X5_1000
+squares_x: 8
+squares_y: 6
+square_length_mm: 45.0
+marker_length_mm: 33.0
+board_size_mm:
+- 360.0
+- 270.0
+image_px:
+- 4488
+- 3425
+dpi: 300
+n_charuco_corners: 35

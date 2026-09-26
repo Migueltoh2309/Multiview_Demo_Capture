@@ -1,0 +1,461 @@
+{
+  "set": "extrinsecos_practica_v2",
+  "n_tomas_evaluadas": 29,
+  "error_distancia_mm": {
+    "mean": 2.622,
+    "rms": 4.945,
+    "p95": 9.461,
+    "max": 40.64
+  },
+  "error_3d_absoluto_mm_toma_ancla": {
+    "mean": 1.59,
+    "rms": 1.651,
+    "p95": 2.293,
+    "max": 2.378
+  },
+  "planaridad_rms_mm": {
+    "mean": 1.516,
+    "rms": 2.136,
+    "p95": 4.871,
+    "max": 6.423
+  },
+  "robustez_camaras_por_punto_pct": {
+    "3_camaras": 36.3,
+    "2_camaras": 44.7,
+    "1_camaras": 19.1
+  },
+  "por_toma": [
+    {
+      "frame": "shot_000",
+      "n_puntos_reconstruidos": 14,
+      "planaridad_rms_mm": 0.341,
+      "reproyeccion_rms_px": 0.679,
+      "camaras_por_punto": {
+        "1": 6,
+        "2": 14
+      },
+      "error_3d_mean_mm": 1.59,
+      "error_3d_rms_mm": 1.651,
+      "error_3d_p95_mm": 2.293,
+      "error_3d_max_mm": 2.378,
+      "error_distancia_mean_mm": 0.429,
+      "error_distancia_rms_mm": 0.536,
+      "error_distancia_p95_mm": 1.119,
+      "error_distancia_max_mm": 1.546
+    },
+    {
+      "frame": "shot_001",
+      "n_puntos_reconstruidos": 14,
+      "planaridad_rms_mm": 0.36,
+      "reproyeccion_rms_px": 1.886,
+      "camaras_por_punto": {
+        "1": 16,
+        "3": 4,
+        "2": 14
+      },
+      "error_distancia_mean_mm": 0.822,
+      "error_distancia_rms_mm": 0.942,
+      "error_distancia_p95_mm": 1.686,
+      "error_distancia_max_mm": 1.929
+    },
+    {
+      "frame": "shot_002",
+      "n_puntos_reconstruidos": 27,
+      "planaridad_rms_mm": 0.478,
+      "reproyeccion_rms_px": 1.927,
+      "camaras_por_punto": {
+        "1": 2,
+        "3": 9,
+        "2": 24
+      },
+      "error_distancia_mean_mm": 1.614,
+      "error_distancia_rms_mm": 2.178,
+      "error_distancia_p95_mm": 5.305,
+      "error_distancia_max_mm": 6.653
+    },
+    {
+      "frame": "shot_003",
+      "n_puntos_reconstruidos": 20,
+      "planaridad_rms_mm": 0.363,
+      "reproyeccion_rms_px": 2.625,
+      "camaras_por_punto": {
+        "2": 15,
+        "3": 20
+      },
+      "error_distancia_mean_mm": 2.755,
+      "error_distancia_rms_mm": 3.922,
+      "error_distancia_p95_mm": 8.349,
+      "error_distancia_max_mm": 9.558
+    },
+    {
+      "frame": "shot_004",
+      "n_puntos_reconstruidos": 16,
+      "planaridad_rms_mm": 2.156,
+      "reproyeccion_rms_px": 1.408,
+      "camaras_por_punto": {
+        "2": 13,
+        "1": 19,
+        "3": 3
+      },
+      "error_distancia_mean_mm": 1.873,
+      "error_distancia_rms_mm": 2.474,
+      "error_distancia_p95_mm": 5.416,
+      "error_distancia_max_mm": 6.829
+    },
+    {
+      "frame": "shot_005",
+      "n_puntos_reconstruidos": 18,
+      "planaridad_rms_mm": 1.091,
+      "reproyeccion_rms_px": 2.108,
+      "camaras_por_punto": {
+        "3": 24,
+        "2": 11
+      },
+      "error_distancia_mean_mm": 2.634,
+      "error_distancia_rms_mm": 3.492,
+      "error_distancia_p95_mm": 5.649,
+      "error_distancia_max_mm": 6.326
+    },
+    {
+      "frame": "shot_006",
+      "n_puntos_reconstruidos": 16,
+      "planaridad_rms_mm": 0.404,
+      "reproyeccion_rms_px": 3.267,
+      "camaras_por_punto": {
+        "2": 3,
+        "3": 32
+      },
+      "error_distancia_mean_mm": 0.29,
+      "error_distancia_rms_mm": 0.416,
+      "error_distancia_p95_mm": 1.087,
+      "error_distancia_max_mm": 1.565
+    },
+    {
+      "frame": "shot_007",
+      "n_puntos_reconstruidos": 29,
+      "planaridad_rms_mm": 0.843,
+      "reproyeccion_rms_px": 1.023,
+      "camaras_por_punto": {
+        "2": 22,
+        "1": 6,
+        "3": 7
+      },
+      "error_distancia_mean_mm": 1.494,
+      "error_distancia_rms_mm": 1.859,
+      "error_distancia_p95_mm": 3.672,
+      "error_distancia_max_mm": 5.016
+    },
+    {
+      "frame": "shot_008",
+      "n_puntos_reconstruidos": 25,
+      "planaridad_rms_mm": 0.648,
+      "reproyeccion_rms_px": 1.535,
+      "camaras_por_punto": {
+        "1": 6,
+        "2": 21,
+        "3": 4
+      },
+      "error_distancia_mean_mm": 1.497,
+      "error_distancia_rms_mm": 1.76,
+      "error_distancia_p95_mm": 3.003,
+      "error_distancia_max_mm": 3.997
+    },
+    {
+      "frame": "shot_009",
+      "n_puntos_reconstruidos": 26,
+      "planaridad_rms_mm": 1.188,
+      "reproyeccion_rms_px": 0.778,
+      "camaras_por_punto": {
+        "2": 22,
+        "3": 4,
+        "1": 8
+      },
+      "error_distancia_mean_mm": 1.486,
+      "error_distancia_rms_mm": 1.889,
+      "error_distancia_p95_mm": 3.588,
+      "error_distancia_max_mm": 5.845
+    },
+    {
+      "frame": "shot_010",
+      "n_puntos_reconstruidos": 21,
+      "planaridad_rms_mm": 1.394,
+      "reproyeccion_rms_px": 1.507,
+      "camaras_por_punto": {
+        "2": 18,
+        "1": 14,
+        "3": 3
+      },
+      "error_distancia_mean_mm": 1.798,
+      "error_distancia_rms_mm": 2.529,
+      "error_distancia_p95_mm": 5.119,
+      "error_distancia_max_mm": 7.789
+    },
+    {
+      "frame": "shot_011",
+      "n_puntos_reconstruidos": 10,
+      "planaridad_rms_mm": 2.718,
+      "reproyeccion_rms_px": 0.338,
+      "camaras_por_punto": {
+        "2": 10,
+        "1": 24,
+        "3": 1
+      },
+      "error_distancia_mean_mm": 1.602,
+      "error_distancia_rms_mm": 2.621,
+      "error_distancia_p95_mm": 6.203,
+      "error_distancia_max_mm": 8.162
+    },
+    {
+      "frame": "shot_012",
+      "n_puntos_reconstruidos": 30,
+      "planaridad_rms_mm": 0.553,
+      "reproyeccion_rms_px": 2.689,
+      "camaras_por_punto": {
+        "2": 7,
+        "3": 28
+      },
+      "error_distancia_mean_mm": 1.687,
+      "error_distancia_rms_mm": 2.229,
+      "error_distancia_p95_mm": 4.465,
+      "error_distancia_max_mm": 5.849
+    },
+    {
+      "frame": "shot_013",
+      "n_puntos_reconstruidos": 5,
+      "planaridad_rms_mm": 0.027,
+      "reproyeccion_rms_px": 3.28,
+      "camaras_por_punto": {
+        "3": 12,
+        "2": 8,
+        "1": 5
+      },
+      "error_distancia_mean_mm": 0.871,
+      "error_distancia_rms_mm": 0.987,
+      "error_distancia_p95_mm": 1.602,
+      "error_distancia_max_mm": 1.661
+    },
+    {
+      "frame": "shot_014",
+      "n_puntos_reconstruidos": 21,
+      "planaridad_rms_mm": 1.802,
+      "reproyeccion_rms_px": 2.539,
+      "camaras_por_punto": {
+        "2": 11,
+        "3": 21,
+        "1": 3
+      },
+      "error_distancia_mean_mm": 2.065,
+      "error_distancia_rms_mm": 2.959,
+      "error_distancia_p95_mm": 5.907,
+      "error_distancia_max_mm": 8.647
+    },
+    {
+      "frame": "shot_015",
+      "n_puntos_reconstruidos": 29,
+      "planaridad_rms_mm": 1.141,
+      "reproyeccion_rms_px": 2.11,
+      "camaras_por_punto": {
+        "2": 20,
+        "3": 9,
+        "1": 6
+      },
+      "error_distancia_mean_mm": 2.351,
+      "error_distancia_rms_mm": 3.085,
+      "error_distancia_p95_mm": 6.117,
+      "error_distancia_max_mm": 7.771
+    },
+    {
+      "frame": "shot_016",
+      "n_puntos_reconstruidos": 15,
+      "planaridad_rms_mm": 1.437,
+      "reproyeccion_rms_px": 1.347,
+      "camaras_por_punto": {
+        "2": 15,
+        "1": 13,
+        "3": 3
+      },
+      "error_distancia_mean_mm": 2.305,
+      "error_distancia_rms_mm": 3.931,
+      "error_distancia_p95_mm": 8.728,
+      "error_distancia_max_mm": 9.831
+    },
+    {
+      "frame": "shot_017",
+      "n_puntos_reconstruidos": 16,
+      "planaridad_rms_mm": 1.976,
+      "reproyeccion_rms_px": 1.541,
+      "camaras_por_punto": {
+        "1": 15,
+        "2": 15,
+        "3": 5
+      },
+      "error_distancia_mean_mm": 3.03,
+      "error_distancia_rms_mm": 4.426,
+      "error_distancia_p95_mm": 10.367,
+      "error_distancia_max_mm": 12.761
+    },
+    {
+      "frame": "shot_018",
+      "n_puntos_reconstruidos": 25,
+      "planaridad_rms_mm": 1.352,
+      "reproyeccion_rms_px": 0.571,
+      "camaras_por_punto": {
+        "1": 10,
+        "2": 25
+      },
+      "error_distancia_mean_mm": 4.09,
+      "error_distancia_rms_mm": 5.312,
+      "error_distancia_p95_mm": 9.63,
+      "error_distancia_max_mm": 10.267
+    },
+    {
+      "frame": "shot_019",
+      "n_puntos_reconstruidos": 13,
+      "planaridad_rms_mm": 1.692,
+      "reproyeccion_rms_px": 1.311,
+      "camaras_por_punto": {
+        "1": 7,
+        "2": 13,
+        "3": 7
+      },
+      "error_distancia_mean_mm": 2.928,
+      "error_distancia_rms_mm": 6.156,
+      "error_distancia_p95_mm": 15.907,
+      "error_distancia_max_mm": 16.334
+    },
+    {
+      "frame": "shot_020",
+      "n_puntos_reconstruidos": 34,
+      "planaridad_rms_mm": 0.587,
+      "reproyeccion_rms_px": 1.955,
+      "camaras_por_punto": {
+        "3": 33,
+        "2": 2
+      },
+      "error_distancia_mean_mm": 0.813,
+      "error_distancia_rms_mm": 1.304,
+      "error_distancia_p95_mm": 3.639,
+      "error_distancia_max_mm": 5.385
+    },
+    {
+      "frame": "shot_021",
+      "n_puntos_reconstruidos": 25,
+      "planaridad_rms_mm": 0.449,
+      "reproyeccion_rms_px": 2.426,
+      "camaras_por_punto": {
+        "3": 29,
+        "2": 6
+      },
+      "error_distancia_mean_mm": 0.965,
+      "error_distancia_rms_mm": 1.333,
+      "error_distancia_p95_mm": 3.165,
+      "error_distancia_max_mm": 4.265
+    },
+    {
+      "frame": "shot_022",
+      "n_puntos_reconstruidos": 29,
+      "planaridad_rms_mm": 0.374,
+      "reproyeccion_rms_px": 2.733,
+      "camaras_por_punto": {
+        "2": 29,
+        "1": 6
+      },
+      "error_distancia_mean_mm": 2.56,
+      "error_distancia_rms_mm": 2.821,
+      "error_distancia_p95_mm": 4.57,
+      "error_distancia_max_mm": 5.806
+    },
+    {
+      "frame": "shot_023",
+      "n_puntos_reconstruidos": 25,
+      "planaridad_rms_mm": 6.423,
+      "reproyeccion_rms_px": 2.256,
+      "camaras_por_punto": {
+        "1": 4,
+        "2": 28,
+        "3": 3
+      },
+      "error_distancia_mean_mm": 8.959,
+      "error_distancia_rms_mm": 12.02,
+      "error_distancia_p95_mm": 21.519,
+      "error_distancia_max_mm": 23.237
+    },
+    {
+      "frame": "shot_024",
+      "n_puntos_reconstruidos": 7,
+      "planaridad_rms_mm": 0.69,
+      "reproyeccion_rms_px": 2.502,
+      "camaras_por_punto": {
+        "1": 2,
+        "3": 26,
+        "2": 7
+      },
+      "error_distancia_mean_mm": 7.014,
+      "error_distancia_rms_mm": 10.672,
+      "error_distancia_p95_mm": 20.718,
+      "error_distancia_max_mm": 21.144
+    },
+    {
+      "frame": "shot_025",
+      "n_puntos_reconstruidos": 12,
+      "planaridad_rms_mm": 4.979,
+      "reproyeccion_rms_px": 2.489,
+      "camaras_por_punto": {
+        "2": 17,
+        "3": 18
+      },
+      "error_distancia_mean_mm": 7.612,
+      "error_distancia_rms_mm": 10.71,
+      "error_distancia_p95_mm": 20.463,
+      "error_distancia_max_mm": 21.262
+    },
+    {
+      "frame": "shot_026",
+      "n_puntos_reconstruidos": 9,
+      "planaridad_rms_mm": 2.827,
+      "reproyeccion_rms_px": 2.176,
+      "camaras_por_punto": {
+        "1": 3,
+        "2": 10,
+        "3": 21
+      },
+      "error_distancia_mean_mm": 6.506,
+      "error_distancia_rms_mm": 9.214,
+      "error_distancia_p95_mm": 19.106,
+      "error_distancia_max_mm": 23.043
+    },
+    {
+      "frame": "shot_027",
+      "n_puntos_reconstruidos": 10,
+      "planaridad_rms_mm": 0.97,
+      "reproyeccion_rms_px": 1.941,
+      "camaras_por_punto": {
+        "2": 10,
+        "3": 25
+      },
+      "error_distancia_mean_mm": 3.38,
+      "error_distancia_rms_mm": 6.015,
+      "error_distancia_p95_mm": 14.949,
+      "error_distancia_max_mm": 16.618
+    },
+    {
+      "frame": "shot_028",
+      "n_puntos_reconstruidos": 20,
+      "planaridad_rms_mm": 4.71,
+      "reproyeccion_rms_px": 1.271,
+      "camaras_por_punto": {
+        "2": 24,
+        "1": 10,
+        "3": 1
+      },
+      "error_distancia_mean_mm": 9.582,
+      "error_distancia_rms_mm": 15.115,
+      "error_distancia_p95_mm": 33.66,
+      "error_distancia_max_mm": 40.64
+    }
+  ],
+  "distancia_conocida": {
+    "ok": false,
+    "d_real_mm": 119.99999172985554
+  }
+}

@@ -1,0 +1,30 @@
+# Etapa 7 / 14 del roadmap: definicion del sistema de coordenadas global {W}.
+#
+# Convencion adoptada (seccion 7 del roadmap):
+#   X = direccion de avance de la faja
+#   Y = direccion transversal (positivo hacia la izquierda del operario)
+#   Z = vertical hacia arriba
+#
+# El origen O_W se materializa colocando el tablero ChArUco en una posicion
+# fisica repetible sobre la faja/mesa (marcar con cinta las esquinas).
+# La calibracion extrinseca resuelve W_T_Ci a partir de esa pose.
+
+method: charuco_board_pose
+
+# Pose del tablero cuando define el origen. El frame nativo del ChArUco de
+# OpenCV es: X a lo largo de squares_x, Y a lo largo de squares_y, Z SALIENDO
+# del plano del tablero. Si el tablero se apoya HORIZONTAL sobre la faja con
+# su eje X alineado al avance, el frame del tablero ya coincide con {W} y esta
+# transformada es la identidad.
+# Si no, definir aqui la transformada rigida  W_T_board.
+board_to_world:
+  translation_m: [0.0, 0.0, 0.0]
+  # Rotacion como angulos RPY intrinsecos ZYX en GRADOS (roll, pitch, yaw)
+  rpy_deg: [0.0, 0.0, 0.0]
+
+# Volumen de trabajo W_capture (seccion 5 del roadmap), en metros, en {W}.
+# Se usa para rechazar reconstrucciones fisicamente imposibles (etapa 16).
+capture_volume:
+  x: [-0.80, 0.80]
+  y: [-0.90, 0.90]
+  z: [-0.20, 1.10]

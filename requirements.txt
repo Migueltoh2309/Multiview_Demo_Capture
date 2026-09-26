@@ -1,0 +1,16 @@
+# Dependencias fijadas del subsistema de demostraciones humanas.
+# Instalar SIEMPRE en el venv del proyecto, nunca en el Python de ROS:
+#   python3 -m venv .venv && source env.sh && pip install -e ".[dev]"
+#
+# numpy < 2: mediapipe 0.10.x aun no es compatible con numpy 2.x
+numpy>=1.24,<2
+opencv-contrib-python==4.10.0.84
+mediapipe==0.10.14
+scipy>=1.10
+pandas>=2.0
+pyyaml>=6.0
+matplotlib>=3.7
+tqdm
+# RealSense D435i. Requiere enlace USB 3: en USB 2 la camara enumera pero no transmite.
+pyrealsense2>=2.55
+pytest>=7

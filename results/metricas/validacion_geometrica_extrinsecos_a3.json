@@ -1,0 +1,634 @@
+{
+  "set": "extrinsecos_a3",
+  "n_tomas_evaluadas": 40,
+  "error_distancia_mm": {
+    "mean": 1.134,
+    "rms": 1.598,
+    "p95": 3.09,
+    "max": 14.22
+  },
+  "error_3d_absoluto_mm_toma_ancla": {
+    "mean": 12.201,
+    "rms": 12.231,
+    "p95": 13.307,
+    "max": 14.046
+  },
+  "planaridad_rms_mm": {
+    "mean": 1.14,
+    "rms": 1.235,
+    "p95": 1.895,
+    "max": 3.301
+  },
+  "robustez_camaras_por_punto_pct": {
+    "3_camaras": 50.2,
+    "2_camaras": 41.5,
+    "1_camaras": 8.3
+  },
+  "por_toma": [
+    {
+      "frame": "shot_000",
+      "n_puntos_reconstruidos": 34,
+      "planaridad_rms_mm": 1.034,
+      "reproyeccion_rms_px": 0.275,
+      "camaras_por_punto": {
+        "2": 33,
+        "3": 1
+      },
+      "error_3d_mean_mm": 12.201,
+      "error_3d_rms_mm": 12.231,
+      "error_3d_p95_mm": 13.307,
+      "error_3d_max_mm": 14.046,
+      "error_distancia_mean_mm": 0.899,
+      "error_distancia_rms_mm": 1.036,
+      "error_distancia_p95_mm": 1.87,
+      "error_distancia_max_mm": 2.836
+    },
+    {
+      "frame": "shot_001",
+      "n_puntos_reconstruidos": 35,
+      "planaridad_rms_mm": 1.115,
+      "reproyeccion_rms_px": 0.771,
+      "camaras_por_punto": {
+        "3": 18,
+        "2": 17
+      },
+      "error_distancia_mean_mm": 0.779,
+      "error_distancia_rms_mm": 1.081,
+      "error_distancia_p95_mm": 2.374,
+      "error_distancia_max_mm": 3.888
+    },
+    {
+      "frame": "shot_002",
+      "n_puntos_reconstruidos": 35,
+      "planaridad_rms_mm": 0.974,
+      "reproyeccion_rms_px": 0.425,
+      "camaras_por_punto": {
+        "2": 11,
+        "3": 24
+      },
+      "error_distancia_mean_mm": 1.181,
+      "error_distancia_rms_mm": 1.366,
+      "error_distancia_p95_mm": 2.504,
+      "error_distancia_max_mm": 3.674
+    },
+    {
+      "frame": "shot_003",
+      "n_puntos_reconstruidos": 33,
+      "planaridad_rms_mm": 1.091,
+      "reproyeccion_rms_px": 0.809,
+      "camaras_por_punto": {
+        "1": 2,
+        "3": 20,
+        "2": 13
+      },
+      "error_distancia_mean_mm": 1.031,
+      "error_distancia_rms_mm": 1.318,
+      "error_distancia_p95_mm": 2.796,
+      "error_distancia_max_mm": 3.603
+    },
+    {
+      "frame": "shot_004",
+      "n_puntos_reconstruidos": 34,
+      "planaridad_rms_mm": 0.978,
+      "reproyeccion_rms_px": 0.546,
+      "camaras_por_punto": {
+        "3": 22,
+        "2": 12,
+        "1": 1
+      },
+      "error_distancia_mean_mm": 1.051,
+      "error_distancia_rms_mm": 1.279,
+      "error_distancia_p95_mm": 2.403,
+      "error_distancia_max_mm": 3.022
+    },
+    {
+      "frame": "shot_005",
+      "n_puntos_reconstruidos": 23,
+      "planaridad_rms_mm": 1.303,
+      "reproyeccion_rms_px": 0.83,
+      "camaras_por_punto": {
+        "1": 10,
+        "3": 7,
+        "2": 16
+      },
+      "error_distancia_mean_mm": 1.207,
+      "error_distancia_rms_mm": 1.553,
+      "error_distancia_p95_mm": 3.041,
+      "error_distancia_max_mm": 4.712
+    },
+    {
+      "frame": "shot_006",
+      "n_puntos_reconstruidos": 32,
+      "planaridad_rms_mm": 1.167,
+      "reproyeccion_rms_px": 1.088,
+      "camaras_por_punto": {
+        "3": 12,
+        "2": 20,
+        "1": 3
+      },
+      "error_distancia_mean_mm": 0.766,
+      "error_distancia_rms_mm": 0.95,
+      "error_distancia_p95_mm": 1.844,
+      "error_distancia_max_mm": 2.401
+    },
+    {
+      "frame": "shot_007",
+      "n_puntos_reconstruidos": 35,
+      "planaridad_rms_mm": 0.87,
+      "reproyeccion_rms_px": 0.597,
+      "camaras_por_punto": {
+        "2": 13,
+        "3": 22
+      },
+      "error_distancia_mean_mm": 0.99,
+      "error_distancia_rms_mm": 1.214,
+      "error_distancia_p95_mm": 2.415,
+      "error_distancia_max_mm": 3.559
+    },
+    {
+      "frame": "shot_008",
+      "n_puntos_reconstruidos": 35,
+      "planaridad_rms_mm": 0.879,
+      "reproyeccion_rms_px": 0.598,
+      "camaras_por_punto": {
+        "2": 8,
+        "3": 27
+      },
+      "error_distancia_mean_mm": 0.616,
+      "error_distancia_rms_mm": 0.796,
+      "error_distancia_p95_mm": 1.672,
+      "error_distancia_max_mm": 2.316
+    },
+    {
+      "frame": "shot_009",
+      "n_puntos_reconstruidos": 35,
+      "planaridad_rms_mm": 1.088,
+      "reproyeccion_rms_px": 1.26,
+      "camaras_por_punto": {
+        "3": 33,
+        "2": 2
+      },
+      "error_distancia_mean_mm": 0.797,
+      "error_distancia_rms_mm": 1.033,
+      "error_distancia_p95_mm": 2.058,
+      "error_distancia_max_mm": 3.175
+    },
+    {
+      "frame": "shot_010",
+      "n_puntos_reconstruidos": 32,
+      "planaridad_rms_mm": 1.764,
+      "reproyeccion_rms_px": 1.15,
+      "camaras_por_punto": {
+        "2": 17,
+        "3": 15,
+        "1": 3
+      },
+      "error_distancia_mean_mm": 1.1,
+      "error_distancia_rms_mm": 1.426,
+      "error_distancia_p95_mm": 2.995,
+      "error_distancia_max_mm": 4.535
+    },
+    {
+      "frame": "shot_011",
+      "n_puntos_reconstruidos": 35,
+      "planaridad_rms_mm": 0.868,
+      "reproyeccion_rms_px": 0.271,
+      "camaras_por_punto": {
+        "2": 18,
+        "3": 17
+      },
+      "error_distancia_mean_mm": 0.575,
+      "error_distancia_rms_mm": 0.747,
+      "error_distancia_p95_mm": 1.481,
+      "error_distancia_max_mm": 2.217
+    },
+    {
+      "frame": "shot_012",
+      "n_puntos_reconstruidos": 31,
+      "planaridad_rms_mm": 2.066,
+      "reproyeccion_rms_px": 1.145,
+      "camaras_por_punto": {
+        "2": 8,
+        "3": 23,
+        "1": 4
+      },
+      "error_distancia_mean_mm": 0.601,
+      "error_distancia_rms_mm": 0.831,
+      "error_distancia_p95_mm": 1.728,
+      "error_distancia_max_mm": 2.124
+    },
+    {
+      "frame": "shot_013",
+      "n_puntos_reconstruidos": 35,
+      "planaridad_rms_mm": 0.883,
+      "reproyeccion_rms_px": 0.912,
+      "camaras_por_punto": {
+        "2": 26,
+        "3": 9
+      },
+      "error_distancia_mean_mm": 0.681,
+      "error_distancia_rms_mm": 0.898,
+      "error_distancia_p95_mm": 1.839,
+      "error_distancia_max_mm": 2.842
+    },
+    {
+      "frame": "shot_014",
+      "n_puntos_reconstruidos": 35,
+      "planaridad_rms_mm": 0.763,
+      "reproyeccion_rms_px": 0.523,
+      "camaras_por_punto": {
+        "3": 30,
+        "2": 5
+      },
+      "error_distancia_mean_mm": 1.261,
+      "error_distancia_rms_mm": 1.414,
+      "error_distancia_p95_mm": 2.375,
+      "error_distancia_max_mm": 3.438
+    },
+    {
+      "frame": "shot_015",
+      "n_puntos_reconstruidos": 35,
+      "planaridad_rms_mm": 1.046,
+      "reproyeccion_rms_px": 1.047,
+      "camaras_por_punto": {
+        "2": 6,
+        "3": 29
+      },
+      "error_distancia_mean_mm": 1.478,
+      "error_distancia_rms_mm": 1.744,
+      "error_distancia_p95_mm": 3.411,
+      "error_distancia_max_mm": 3.93
+    },
+    {
+      "frame": "shot_016",
+      "n_puntos_reconstruidos": 34,
+      "planaridad_rms_mm": 0.875,
+      "reproyeccion_rms_px": 0.504,
+      "camaras_por_punto": {
+        "3": 15,
+        "2": 19,
+        "1": 1
+      },
+      "error_distancia_mean_mm": 1.368,
+      "error_distancia_rms_mm": 1.693,
+      "error_distancia_p95_mm": 3.223,
+      "error_distancia_max_mm": 4.059
+    },
+    {
+      "frame": "shot_017",
+      "n_puntos_reconstruidos": 33,
+      "planaridad_rms_mm": 0.742,
+      "reproyeccion_rms_px": 1.235,
+      "camaras_por_punto": {
+        "3": 21,
+        "2": 12,
+        "1": 2
+      },
+      "error_distancia_mean_mm": 0.557,
+      "error_distancia_rms_mm": 0.71,
+      "error_distancia_p95_mm": 1.437,
+      "error_distancia_max_mm": 1.823
+    },
+    {
+      "frame": "shot_018",
+      "n_puntos_reconstruidos": 35,
+      "planaridad_rms_mm": 1.172,
+      "reproyeccion_rms_px": 0.458,
+      "camaras_por_punto": {
+        "2": 10,
+        "3": 25
+      },
+      "error_distancia_mean_mm": 1.244,
+      "error_distancia_rms_mm": 1.499,
+      "error_distancia_p95_mm": 2.911,
+      "error_distancia_max_mm": 3.74
+    },
+    {
+      "frame": "shot_019",
+      "n_puntos_reconstruidos": 33,
+      "planaridad_rms_mm": 0.869,
+      "reproyeccion_rms_px": 0.369,
+      "camaras_por_punto": {
+        "2": 11,
+        "3": 22,
+        "1": 2
+      },
+      "error_distancia_mean_mm": 0.901,
+      "error_distancia_rms_mm": 1.038,
+      "error_distancia_p95_mm": 1.875,
+      "error_distancia_max_mm": 2.523
+    },
+    {
+      "frame": "shot_020",
+      "n_puntos_reconstruidos": 30,
+      "planaridad_rms_mm": 0.904,
+      "reproyeccion_rms_px": 1.692,
+      "camaras_por_punto": {
+        "2": 16,
+        "3": 14,
+        "1": 3
+      },
+      "error_distancia_mean_mm": 1.029,
+      "error_distancia_rms_mm": 1.264,
+      "error_distancia_p95_mm": 2.329,
+      "error_distancia_max_mm": 2.99
+    },
+    {
+      "frame": "shot_021",
+      "n_puntos_reconstruidos": 31,
+      "planaridad_rms_mm": 1.001,
+      "reproyeccion_rms_px": 0.599,
+      "camaras_por_punto": {
+        "2": 12,
+        "3": 19,
+        "1": 4
+      },
+      "error_distancia_mean_mm": 0.455,
+      "error_distancia_rms_mm": 0.562,
+      "error_distancia_p95_mm": 1.065,
+      "error_distancia_max_mm": 1.484
+    },
+    {
+      "frame": "shot_022",
+      "n_puntos_reconstruidos": 25,
+      "planaridad_rms_mm": 0.906,
+      "reproyeccion_rms_px": 0.629,
+      "camaras_por_punto": {
+        "1": 10,
+        "2": 13,
+        "3": 12
+      },
+      "error_distancia_mean_mm": 0.503,
+      "error_distancia_rms_mm": 0.605,
+      "error_distancia_p95_mm": 1.103,
+      "error_distancia_max_mm": 1.55
+    },
+    {
+      "frame": "shot_023",
+      "n_puntos_reconstruidos": 31,
+      "planaridad_rms_mm": 0.741,
+      "reproyeccion_rms_px": 0.52,
+      "camaras_por_punto": {
+        "2": 17,
+        "3": 14,
+        "1": 4
+      },
+      "error_distancia_mean_mm": 0.472,
+      "error_distancia_rms_mm": 0.601,
+      "error_distancia_p95_mm": 1.24,
+      "error_distancia_max_mm": 1.779
+    },
+    {
+      "frame": "shot_024",
+      "n_puntos_reconstruidos": 30,
+      "planaridad_rms_mm": 1.456,
+      "reproyeccion_rms_px": 1.757,
+      "camaras_por_punto": {
+        "2": 11,
+        "3": 19,
+        "1": 3
+      },
+      "error_distancia_mean_mm": 1.162,
+      "error_distancia_rms_mm": 1.464,
+      "error_distancia_p95_mm": 2.904,
+      "error_distancia_max_mm": 4.404
+    },
+    {
+      "frame": "shot_025",
+      "n_puntos_reconstruidos": 32,
+      "planaridad_rms_mm": 0.862,
+      "reproyeccion_rms_px": 1.382,
+      "camaras_por_punto": {
+        "2": 20,
+        "3": 12,
+        "1": 3
+      },
+      "error_distancia_mean_mm": 0.94,
+      "error_distancia_rms_mm": 1.239,
+      "error_distancia_p95_mm": 2.552,
+      "error_distancia_max_mm": 3.457
+    },
+    {
+      "frame": "shot_026",
+      "n_puntos_reconstruidos": 34,
+      "planaridad_rms_mm": 1.257,
+      "reproyeccion_rms_px": 0.668,
+      "camaras_por_punto": {
+        "2": 19,
+        "1": 1,
+        "3": 15
+      },
+      "error_distancia_mean_mm": 1.373,
+      "error_distancia_rms_mm": 1.654,
+      "error_distancia_p95_mm": 3.071,
+      "error_distancia_max_mm": 3.821
+    },
+    {
+      "frame": "shot_027",
+      "n_puntos_reconstruidos": 34,
+      "planaridad_rms_mm": 1.069,
+      "reproyeccion_rms_px": 1.759,
+      "camaras_por_punto": {
+        "3": 25,
+        "2": 9,
+        "1": 1
+      },
+      "error_distancia_mean_mm": 0.999,
+      "error_distancia_rms_mm": 1.341,
+      "error_distancia_p95_mm": 2.416,
+      "error_distancia_max_mm": 5.606
+    },
+    {
+      "frame": "shot_028",
+      "n_puntos_reconstruidos": 34,
+      "planaridad_rms_mm": 0.667,
+      "reproyeccion_rms_px": 0.735,
+      "camaras_por_punto": {
+        "2": 14,
+        "3": 20,
+        "1": 1
+      },
+      "error_distancia_mean_mm": 0.803,
+      "error_distancia_rms_mm": 0.928,
+      "error_distancia_p95_mm": 1.601,
+      "error_distancia_max_mm": 2.004
+    },
+    {
+      "frame": "shot_029",
+      "n_puntos_reconstruidos": 24,
+      "planaridad_rms_mm": 1.002,
+      "reproyeccion_rms_px": 1.119,
+      "camaras_por_punto": {
+        "1": 4,
+        "2": 6,
+        "3": 18
+      },
+      "error_distancia_mean_mm": 1.984,
+      "error_distancia_rms_mm": 2.318,
+      "error_distancia_p95_mm": 4.312,
+      "error_distancia_max_mm": 5.203
+    },
+    {
+      "frame": "shot_030",
+      "n_puntos_reconstruidos": 35,
+      "planaridad_rms_mm": 1.062,
+      "reproyeccion_rms_px": 1.671,
+      "camaras_por_punto": {
+        "2": 9,
+        "3": 26
+      },
+      "error_distancia_mean_mm": 2.47,
+      "error_distancia_rms_mm": 3.003,
+      "error_distancia_p95_mm": 5.9,
+      "error_distancia_max_mm": 9.397
+    },
+    {
+      "frame": "shot_031",
+      "n_puntos_reconstruidos": 25,
+      "planaridad_rms_mm": 1.751,
+      "reproyeccion_rms_px": 1.907,
+      "camaras_por_punto": {
+        "3": 22,
+        "2": 3
+      },
+      "error_distancia_mean_mm": 2.347,
+      "error_distancia_rms_mm": 2.842,
+      "error_distancia_p95_mm": 5.324,
+      "error_distancia_max_mm": 6.962
+    },
+    {
+      "frame": "shot_032",
+      "n_puntos_reconstruidos": 26,
+      "planaridad_rms_mm": 3.301,
+      "reproyeccion_rms_px": 1.693,
+      "camaras_por_punto": {
+        "1": 4,
+        "2": 15,
+        "3": 11
+      },
+      "error_distancia_mean_mm": 3.2,
+      "error_distancia_rms_mm": 4.738,
+      "error_distancia_p95_mm": 11.317,
+      "error_distancia_max_mm": 14.22
+    },
+    {
+      "frame": "shot_033",
+      "n_puntos_reconstruidos": 35,
+      "planaridad_rms_mm": 1.272,
+      "reproyeccion_rms_px": 1.581,
+      "camaras_por_punto": {
+        "2": 12,
+        "3": 23
+      },
+      "error_distancia_mean_mm": 1.714,
+      "error_distancia_rms_mm": 2.154,
+      "error_distancia_p95_mm": 4.195,
+      "error_distancia_max_mm": 6.277
+    },
+    {
+      "frame": "shot_034",
+      "n_puntos_reconstruidos": 15,
+      "planaridad_rms_mm": 0.51,
+      "reproyeccion_rms_px": 1.136,
+      "camaras_por_punto": {
+        "3": 6,
+        "2": 9,
+        "1": 8
+      },
+      "error_distancia_mean_mm": 0.64,
+      "error_distancia_rms_mm": 0.794,
+      "error_distancia_p95_mm": 1.466,
+      "error_distancia_max_mm": 1.728
+    },
+    {
+      "frame": "shot_035",
+      "n_puntos_reconstruidos": 30,
+      "planaridad_rms_mm": 1.426,
+      "reproyeccion_rms_px": 0.654,
+      "camaras_por_punto": {
+        "1": 5,
+        "3": 12,
+        "2": 18
+      },
+      "error_distancia_mean_mm": 1.893,
+      "error_distancia_rms_mm": 2.192,
+      "error_distancia_p95_mm": 3.908,
+      "error_distancia_max_mm": 5.07
+    },
+    {
+      "frame": "shot_036",
+      "n_puntos_reconstruidos": 33,
+      "planaridad_rms_mm": 1.15,
+      "reproyeccion_rms_px": 0.553,
+      "camaras_por_punto": {
+        "2": 16,
+        "3": 17,
+        "1": 2
+      },
+      "error_distancia_mean_mm": 1.535,
+      "error_distancia_rms_mm": 1.734,
+      "error_distancia_p95_mm": 3.001,
+      "error_distancia_max_mm": 3.629
+    },
+    {
+      "frame": "shot_037",
+      "n_puntos_reconstruidos": 19,
+      "planaridad_rms_mm": 1.886,
+      "reproyeccion_rms_px": 2.188,
+      "camaras_por_punto": {
+        "2": 19,
+        "1": 15
+      },
+      "error_distancia_mean_mm": 1.582,
+      "error_distancia_rms_mm": 2.108,
+      "error_distancia_p95_mm": 5.026,
+      "error_distancia_max_mm": 6.597
+    },
+    {
+      "frame": "shot_038",
+      "n_puntos_reconstruidos": 31,
+      "planaridad_rms_mm": 0.846,
+      "reproyeccion_rms_px": 0.411,
+      "camaras_por_punto": {
+        "2": 26,
+        "3": 5,
+        "1": 4
+      },
+      "error_distancia_mean_mm": 0.65,
+      "error_distancia_rms_mm": 0.886,
+      "error_distancia_p95_mm": 1.942,
+      "error_distancia_max_mm": 2.568
+    },
+    {
+      "frame": "shot_039",
+      "n_puntos_reconstruidos": 22,
+      "planaridad_rms_mm": 0.962,
+      "reproyeccion_rms_px": 0.52,
+      "camaras_por_punto": {
+        "1": 13,
+        "2": 22
+      },
+      "error_distancia_mean_mm": 1.348,
+      "error_distancia_rms_mm": 1.534,
+      "error_distancia_p95_mm": 2.68,
+      "error_distancia_max_mm": 3.153
+    }
+  ],
+  "distancia_conocida": {
+    "ok": true,
+    "d_real_mm": 176.0,
+    "d_est_mm": 174.106,
+    "error_mm": 1.894,
+    "error_relativo_pct": 1.0762,
+    "camaras": {
+      "a": [
+        "cam2",
+        "cam3"
+      ],
+      "b": [
+        "cam2",
+        "cam3"
+      ]
+    }
+  }
+}

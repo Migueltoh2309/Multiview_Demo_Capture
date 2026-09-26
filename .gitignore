@@ -1,0 +1,28 @@
+# --- entorno ---
+.venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+*.egg-info/
+
+# --- datos pesados: NO versionar ---
+# Los videos y datasets se respaldan aparte (disco externo / nube).
+data/raw/
+data/calib_shots/
+data/dataset/
+results/figuras/
+*.mp4
+*.avi
+*.npz
+
+# --- salidas de calibracion: SI versionar ---
+# calib/*.yaml son pocos KB y son el estado del sistema. No ignorar.
+
+.DS_Store
+
+# --- material personal / de trabajo: NO publicar ---
+temporal/
+docs/papers/*.pdf
+docs/Manuscrito*.pdf
+docs/bitacora/
+docs/roadmap_*.md

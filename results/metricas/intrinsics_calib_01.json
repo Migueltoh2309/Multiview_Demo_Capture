@@ -1,0 +1,46 @@
+{
+  "cam2": {
+    "rms_reprojection_px": 0.7839,
+    "n_views_usadas": 49,
+    "n_views_descartadas": 16,
+    "per_view_rms_px": {
+      "mean": 0.7401,
+      "max": 1.296,
+      "p95": 1.217
+    },
+    "fx": 753.23,
+    "fy": 748.58,
+    "cx": 645.71,
+    "cy": 352.59,
+    "distortion": [
+      0.105896,
+      -0.194869,
+      -0.004716,
+      0.000227,
+      0.0
+    ],
+    "coverage": {
+      "grid_fill": 0.778,
+      "edge_point_ratio": 0.149,
+      "n_points": 1575.0
+    },
+    "vistas_descartadas": [
+      "shot_059",
+      "shot_029",
+      "shot_058",
+      "shot_022",
+      "shot_061",
+      "shot_045",
+      "shot_017",
+      "shot_028",
+      "shot_019",
+      "shot_030",
+      "shot_060",
+      "shot_002",
+      "shot_000",
+      "shot_063",
+      "shot_057",
+      "shot_056"
+    ]
+  }
+}

@@ -1,0 +1,61 @@
+# Configuracion de la camara RealSense D435i.
+#
+# La D435i entrega intrinsecos y extrinsecos depth<->color DE FABRICA, grabados
+# en la memoria del dispositivo y validos para cada perfil de stream. Por eso
+# este subsistema NO necesita calibracion intrinseca con ChArUco: se leen del
+# dispositivo al arrancar y se guardan en calib/ para trazabilidad.
+#
+# Lo que SI hay que calibrar es la pose de la camara en {W} (extrinseca) y,
+# mas adelante, la relacion camara <-> base del H1-2 (hand-eye).
+
+device:
+  serial: null           # null = primera camara encontrada. Rellenar cuando
+                         # haya mas de una (el H1-2 lleva la suya).
+  require_usb3: true     # aborta si el enlace no es USB 3.x: en USB 2 la
+                         # camara no sostiene el streaming (ver bitacora).
+
+streams:
+  # Perfil de trabajo. Con USB 3 la D435i admite 848x480@30 en depth, que es
+  # la resolucion NATIVA del sensor estereo y la que menos artefactos produce.
+  color: {width: 848, height: 480, fps: 30, format: bgr8}
+  depth: {width: 848, height: 480, fps: 30, format: z16}
+  align_to: color        # alinea depth al frame de color: asi un pixel (u,v)
+                         # de la deteccion 2D indexa directamente la profundidad
+  enable_imu: false      # el D435i tiene IMU; no se usa con la camara fija
+
+# Perfil de respaldo si el enlace es USB 2 (degradado, solo para desarrollo).
+fallback_usb2:
+  color: {width: 424, height: 240, fps: 6, format: bgr8}
+  depth: {width: 480, height: 270, fps: 6, format: z16}
+
+sensor:
+  # Los presets viven en el firmware. 'high_accuracy' descarta agresivamente los
+  # pixeles de baja confianza: menos puntos, pero los que quedan son fiables.
+  # Es lo correcto para medir la posicion de una fruta; 'high_density' seria
+  # mejor para reconstruccion densa de escena.
+  visual_preset: high_accuracy
+  laser_power: 240.0     # 0-360. Mas potencia = mejor profundidad en superficies
+                         # poco texturadas como la piel de una mandarina.
+  emitter_enabled: true
+  # El autoexposure del color persigue la escena y cambia el aspecto de la fruta
+  # entre frames, lo que desestabiliza la segmentacion por color.
+  color_auto_exposure: false
+  color_exposure: 156
+  color_auto_white_balance: false
+  color_white_balance: 4600
+
+# Cadena de post-procesado de profundidad (se aplica en este orden).
+# Cada filtro reduce ruido a costa de detalle espacial o de latencia temporal.
+postprocess:
+  decimation: {enabled: false, magnitude: 2}   # baja resolucion: NO, perdemos
+                                               # precision en frutas pequenas
+  spatial:    {enabled: true, magnitude: 2, smooth_alpha: 0.5, smooth_delta: 20,
+               hole_fill: 0}
+  temporal:   {enabled: true, smooth_alpha: 0.4, smooth_delta: 20,
+               persistence: 3}
+  # OJO: el temporal filter promedia entre frames. Con la fruta QUIETA mejora
+  # mucho el ruido; con la fruta EN MOVIMIENTO sobre la faja introduce arrastre.
+  # Desactivarlo al pasar a la etapa de objeto movil.
+  hole_filling: {enabled: false, mode: 1}      # rellena huecos INVENTANDO datos:
+                                               # nunca para medir, solo para ver
+  threshold:  {enabled: true, min_m: 0.20, max_m: 2.00}

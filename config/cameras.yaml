@@ -1,0 +1,100 @@
+# Configuracion de las camaras RGB del sistema de captura de demostraciones.
+# Etapa 1 del roadmap: identificar device index, resolucion y FPS de cada camara.
+#
+# Las 3 unidades son Logitech BRIO. Se probo `/dev/v4l/by-id/...` (estable por
+# numero de serie) pero 2 de las 3 BRIO reportan el mismo serial de fabrica
+# "00000000" -> colisionan y el symlink por-id termina apuntando a cualquiera
+# de las dos. Se usa en su lugar `/dev/v4l/by-path/...`, que identifica por
+# PUERTO USB FISICO (topologia PCI/USB), unico para las 3 aunque el serial se
+# repita. Esto exige dejar cada camara conectada siempre al mismo puerto
+# fisico del equipo -- marcar cada puerto con cinta/etiqueta.
+#
+# Las 3 se verificaron en SuperSpeed (5000M, USB 3.0) el 2026-09-16 (ver
+# docs/bitacora/). Un cable defectuoso puede hacer caer una BRIO a USB2 e
+# incluso a un error de enumeracion ("Not enough bandwidth" / errno -28); si
+# una cae a 480M en `lsusb -t` o no aparece en video*, sospechar del cable
+# antes que del puerto.
+#
+# Asignacion final de puertos (2026-09-21): el equipo tiene 2 puertos USB-A y
+# 1 USB-C utilizables; cada camara queda fija en uno de los tres, siempre el
+# mismo (indispensable para que `by-path` siga siendo valido).
+#
+# Ejecutar `scripts/01_probe_cameras.py --scan` para descubrir los devices
+# disponibles y confirmar este archivo.
+
+backend: V4L2            # V4L2 | ANY  (en Linux, V4L2 permite fijar exposicion)
+
+defaults:
+  width: 1280
+  height: 720
+  fps: 30
+  fourcc: MJPG           # MJPG es obligatorio para 1280x720@30 en la mayoria
+                         # de webcams USB2: YUYV solo llega a ~10 FPS.
+  buffersize: 2          # MINIMO 2. Con 1, el driver uvcvideo entrega la mitad
+                         # de FPS (medido: 15 en lugar de 30 a 1280x720 MJPG).
+                         # Los frames rancios se descartan en software, no aqui.
+  controls:
+    # Fijar exposicion y balance de blancos evita que el auto-ajuste cambie
+    # el brillo entre camaras y arruine la deteccion del ChArUco.
+    # `null` = no tocar el control. Ajustar tras probar con 02_preview_camera.py
+    auto_exposure: 1     # V4L2: 3 = auto, 1 = manual
+    exposure: 156        # solo aplica si auto_exposure == 1
+    auto_wb: 0           # 0 = manual, 1 = auto
+    wb_temperature: 4600
+    autofocus: 0         # el foco NO debe cambiar: invalida la calibracion
+    focus: null          # dejar null salvo que la camara lo soporte
+    gain: null
+    brightness: null
+
+cameras:
+  # Asignacion puerto -> rol PROVISIONAL, segun el orden en que se probaron
+  # los puertos, no segun montaje fisico todavia. `role` es solo una
+  # etiqueta (no se usa en la logica de ningun script) -- renombrar sin
+  # miedo apenas se monten las 3 en su posicion final (ver el diagrama del
+  # rig: frontal a 0 grados, laterales a ~50 grados a cada lado).
+  - id: cam1             # identificador logico, usado en todos los archivos
+    device: /dev/v4l/by-path/pci-0000:00:14.0-usb-0:7:1.0-video-index0
+    serial: "00000000"   # 2026-09-24: CUARTA unidad BRIO probada como cam1.
+                         # Las unidades 1 (34B526F0) y 2 (44D40160) y 3
+                         # (E8037C24) dieron nitidez pico 11-25 en este mismo
+                         # puerto/posicion -- la 4a da 68-76, mucho mejor
+                         # (aun por debajo de cam2/cam3 >200, pero utilizable
+                         # sin relajar umbrales).
+                         # NOTA (2026-09-24, mas tarde): el puerto USB-C
+                         # reenumero como "usb-0:7" en vez de "usb-0:2" tras
+                         # reconectar -- el numero logico del puerto fisico
+                         # NO es estable entre sesiones en este equipo.
+                         # Verificar SIEMPRE con lsusb -t antes de una sesion
+                         # larga, no asumir que el numero de puerto de la
+                         # ultima vez sigue valido.
+                         # NOTA: serial duplicado con cam2/cam3 (ver comentario
+                         # de cabecera del archivo) -- no sirve para
+                         # reidentificar esta unidad si se desconecta.
+    role: frontal
+    controls:
+      focus: 15            # 2026-09-24: barrido 0-255 paso 15 con el tablero
+                           # A3 fijo (no sostenido a mano). Meseta 0-30 con
+                           # 35/35 esquinas y nitidez 68-76; se fijo el centro.
+    notes: "puerto USB-C (2026-09-21): asignacion final del rig es 2 puertos
+      USB-A + 1 USB-C, una camara fija por puerto. cam1 aqui, cam2 en un
+      USB-A (ya calibrada intrinsecamente), cam3 pendiente en el USB-A
+      restante."
+  - id: cam2
+    device: /dev/v4l/by-path/pci-0000:00:14.0-usb-0:3:1.0-video-index0
+    serial: "00000000"   # duplicado con cam3 -- de fabrica, no sirve para distinguirlas
+    role: lateral_izq
+    notes: "puerto USB-A fisico #3, SuperSpeed 5000M (requirio cambiar el cable)"
+  - id: cam3
+    device: /dev/v4l/by-path/pci-0000:00:14.0-usb-0:1:1.0-video-index0
+    serial: "00000000"   # duplicado con cam2 -- de fabrica, no sirve para distinguirlas
+    role: lateral_der
+    controls:
+      exposure: 110       # 2026-09-24: RMS intrinseco con tablero A3 se quedaba
+                           # en ~0.80 px (> 0.7) pese a nitidez de lente
+                           # excelente (~680) y buena cobertura -- sospecha de
+                           # sobreexposicion/blooming en los cuadros blancos
+                           # con el default (156, saturado%=0.57 vs 0.20-0.41
+                           # en valores mas bajos). Bajado a 110 (nitidez 569,
+                           # saturado% 0.41) para probar si mejora el RMS.
+    notes: "puerto USB-A fisico #1 (2026-09-21, asignacion final: 2 USB-A +
+      1 USB-C -- ver cam1). SuperSpeed 5000M."

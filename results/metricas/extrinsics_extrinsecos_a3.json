@@ -1,0 +1,62 @@
+{
+  "rms_global_px": 1.9906,
+  "rms_per_camera_px": {
+    "cam1": 1.7718,
+    "cam2": 1.638,
+    "cam3": 2.4408
+  },
+  "n_observaciones": 117,
+  "n_poses_tablero": 40,
+  "pose_ancla": "shot_000",
+  "baselines_m": {
+    "cam1-cam2": 0.9087,
+    "cam1-cam3": 1.024,
+    "cam2-cam3": 1.544
+  },
+  "camaras": {
+    "cam1": {
+      "posicion_world_m": [
+        0.0022,
+        0.0783,
+        -1.507
+      ],
+      "rpy_world_deg": [
+        -1.86,
+        -4.01,
+        -179.95
+      ],
+      "distancia_al_origen_m": 1.5091
+    },
+    "cam2": {
+      "posicion_world_m": [
+        -0.674,
+        0.0942,
+        -0.9003
+      ],
+      "rpy_world_deg": [
+        -5.82,
+        -41.09,
+        175.82
+      ],
+      "distancia_al_origen_m": 1.1286
+    },
+    "cam3": {
+      "posicion_world_m": [
+        0.8687,
+        0.0942,
+        -0.9615
+      ],
+      "rpy_world_deg": [
+        -2.63,
+        39.96,
+        -177.59
+      ],
+      "distancia_al_origen_m": 1.2992
+    }
+  },
+  "advertencias": [
+    "cam1: RMS de reproyeccion extrinseca 1.77 px (> 1.5 px). Suele indicar que la camara se movio entre tomas o que sus intrinsecos no son fiables.",
+    "cam2: RMS de reproyeccion extrinseca 1.64 px (> 1.5 px). Suele indicar que la camara se movio entre tomas o que sus intrinsecos no son fiables.",
+    "cam3: RMS de reproyeccion extrinseca 2.44 px (> 1.5 px). Suele indicar que la camara se movio entre tomas o que sus intrinsecos no son fiables."
+  ]
+}

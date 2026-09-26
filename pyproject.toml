@@ -1,0 +1,30 @@
+[build-system]
+requires = ["setuptools>=64"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "tesis-picking"
+version = "0.1.0"
+description = "Picking bimanual sobre faja con humanoide: LfD desde demostraciones humanas markerless"
+requires-python = ">=3.10"
+dependencies = [
+    "numpy>=1.24,<2",
+    "opencv-contrib-python==4.10.0.84",
+    "mediapipe==0.10.14",
+    "scipy>=1.10",
+    "pandas>=2.0",
+    "pyyaml>=6.0",
+    "matplotlib>=3.7",
+    "tqdm",
+    "pyrealsense2>=2.55",   # RealSense D435i (vision)
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=7"]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src", "tests"]

@@ -1,0 +1,25 @@
+# Descripcion fisica de los objetos a detectar y localizar.
+#
+# El radio importa: la profundidad mide la SUPERFICIE FRONTAL de la fruta, pero
+# el punto de agarre util es su CENTRO. El localizador corrige esa diferencia
+# empujando el punto a lo largo del rayo optico (ver localizacion/profundidad.py).
+
+mandarina:
+  # Rango de diametros de una mandarina de exportacion (calibres comerciales
+  # 1XX-5 de la norma peruana). Medir las frutas reales y ajustar.
+  diametro_m: {min: 0.050, nominal: 0.065, max: 0.085}
+  # Segmentacion por color en HSV. OpenCV usa H en [0,179], S y V en [0,255].
+  # El naranja de la mandarina cae cerca de H=10-25.
+  # Ajustar con scripts/vision/12_ajustar_color.py bajo la ILUMINACION REAL:
+  # estos valores dependen del ambiente y no son transferibles entre montajes.
+  hsv:
+    h: [5, 25]
+    s: [120, 255]
+    v: [80, 255]
+  # Filtros de forma para descartar falsos positivos.
+  forma:
+    area_min_px: 400        # a 1.0 m con 848x480, una mandarina ocupa ~1500 px
+    area_max_px: 60000
+    circularidad_min: 0.65  # 4*pi*area/perimetro^2; 1.0 = circulo perfecto
+    relacion_aspecto: [0.65, 1.55]
+    solidez_min: 0.85       # area / area del casco convexo; descarta racimos

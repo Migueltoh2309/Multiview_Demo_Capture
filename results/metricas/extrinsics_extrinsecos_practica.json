@@ -1,0 +1,44 @@
+{
+  "rms_global_px": 1.834,
+  "rms_per_camera_px": {
+    "cam2": 1.0514,
+    "cam3": 2.3494
+  },
+  "n_observaciones": 60,
+  "n_poses_tablero": 36,
+  "pose_ancla": "shot_000",
+  "baselines_m": {
+    "cam2-cam3": 1.0373
+  },
+  "camaras": {
+    "cam2": {
+      "posicion_world_m": [
+        0.7624,
+        0.0504,
+        -0.3841
+      ],
+      "rpy_world_deg": [
+        -20.37,
+        -48.74,
+        8.97
+      ],
+      "distancia_al_origen_m": 0.8551
+    },
+    "cam3": {
+      "posicion_world_m": [
+        -0.2735,
+        0.0456,
+        -0.3303
+      ],
+      "rpy_world_deg": [
+        -21.09,
+        47.12,
+        -9.95
+      ],
+      "distancia_al_origen_m": 0.4313
+    }
+  },
+  "advertencias": [
+    "cam3: RMS de reproyeccion extrinseca 2.35 px (> 1.5 px). Suele indicar que la camara se movio entre tomas o que sus intrinsecos no son fiables."
+  ]
+}
