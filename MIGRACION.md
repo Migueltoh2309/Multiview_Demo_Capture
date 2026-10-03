@@ -2,10 +2,10 @@
 
 ## Qué se copia y qué NO
 
-**Copiar todo el directorio `~/Maestria_tesis`, excepto `.venv/`.**
+**Clonar el repositorio (o copiar todo el directorio `~/Github/Multiview_Demo_Capture`), excepto `.venv/`.**
 
 El `.venv/` lleva rutas absolutas grabadas dentro (la instalación editable del
-paquete apunta a `/home/utec/Maestria_tesis/src`) y binarios compilados para
+paquete apunta a la ruta absoluta de `src/` de la carpeta original) y binarios compilados para
 este CPU. Copiarlo produce fallos difíciles de leer. Se reconstruye en 2 minutos.
 
 Todo lo demás es portable: `paths.ROOT` se calcula a partir de `__file__`, así
@@ -17,16 +17,28 @@ que el proyecto funciona desde cualquier ruta, con cualquier usuario.
 # --- en la laptop vieja ---
 cd ~
 tar --exclude='.venv' --exclude='__pycache__' --exclude='.pytest_cache' \
-    --exclude='*.egg-info' -czf maestria_tesis.tar.gz Maestria_tesis/
+    --exclude='*.egg-info' -czf multiview_demo_capture.tar.gz Multiview_Demo_Capture/
 
 # --- en la laptop nueva ---
-tar -xzf maestria_tesis.tar.gz
-cd ~/Maestria_tesis
+tar -xzf multiview_demo_capture.tar.gz
+cd ~/Github/Multiview_Demo_Capture
 python3 -m venv .venv
 source env.sh                 # hace `unset PYTHONPATH` y activa el venv
 pip install -e ".[dev]"
 pytest -q                     # deben pasar 23 tests
 ```
+
+Para un entorno **idéntico** al usado en los resultados (mismas versiones de
+todo, incluidas las dependencias indirectas), instalar desde `requirements.lock`
+en vez de dejar que pip resuelva:
+
+```bash
+pip install -r requirements.lock
+pip install --no-deps -e ".[dev]"
+```
+
+**Si se mueve o renombra la carpeta**, el `.venv` deja de servir por la misma
+razón: hay que borrarlo y recrearlo así.
 
 Si `pytest` pasa, la migración está completa: la capa geométrica, la de visión y
 toda la cadena de localización quedan verificadas en la máquina nueva.

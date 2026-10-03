@@ -7,7 +7,7 @@ from __future__ import annotations
 
 from pathlib import Path
 
-# .../Maestria_tesis/src/tesis_picking/common/paths.py -> .../Maestria_tesis
+# .../Multiview_Demo_Capture/src/tesis_picking/common/paths.py -> .../Multiview_Demo_Capture
 ROOT = Path(__file__).resolve().parents[3]
 
 CONFIG = ROOT / "config"
