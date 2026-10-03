@@ -122,4 +122,4 @@ hardware) → `14_extrinsecos_camara.py` → `15_exactitud_profundidad.py`.
 
 ## Autor
 
-Miguel Olortegui — Maestría, UTEC
+MiTo Olórtegui Huamán — Maestría, UTEC
