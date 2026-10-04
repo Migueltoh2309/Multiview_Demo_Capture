@@ -5,9 +5,11 @@ para aprendizaje por demostración (LfD). Reconstruye en 3D el movimiento de
 ambos brazos de una persona (hombros, codos, muñecas) mientras realiza una
 tarea de picking, para luego transferirlo a un robot humanoide **Unitree H1-2**.
 
-Forma parte de mi tesis de maestría en UTEC: *picking bimanual de mandarinas
-sobre faja transportadora con un humanoide de base fija*. El control y la
-simulación del robot están en [H1_2_MiTo](https://github.com/Migueltoh2309/H1_2_MiTo).
+Forma parte de mi tesis de maestría en UTEC, *Desarrollo de un algoritmo de aprendizaje por demostración para asistencia
+robótica en el picking de frutas sobre faja transportadora mediante visión
+artificial y un robot humanoide*. Este repositorio cubre la captura de las demostraciones humanas; el control
+y la simulación del robot están en
+[H1_2_Humanoid_Control](https://github.com/Migueltoh2309/H1_2_Humanoid_Control).
 
 ## Cómo funciona
 
